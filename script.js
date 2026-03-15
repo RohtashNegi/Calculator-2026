@@ -7,9 +7,13 @@ let arr = Array.from(buttons);
 arr.forEach(button => {
     button.addEventListener('click', (e) => {
         if(e.target.innerHTML == "="){
+             if(input.value == ""){
+                  input.value = "";
+             }
+             else{
             string = eval(string);
-            console.log(string)
             input.value = string;
+            }
         }
 
         else if(e.target.innerHTML == "AC"){
